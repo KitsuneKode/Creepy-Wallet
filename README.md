@@ -3,7 +3,7 @@
  This project is a React application designed to generate cryptocurrency wallets for both Solana and Ethereum. It leverages mnemonic phrases to create wallets and display their private and public keys.
 
 # LiveLinks
-[Crypto-Wallet Generator](https://kitsunekode-web3-wallet-sand.vercel.app/)
+[Creepy-Wallet](https://kitsunekode-creepy-wallet-sand.vercel.app/)
 
 # Pictures
 
