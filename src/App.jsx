@@ -40,6 +40,9 @@ function App() {
           <h1>Generate Sol Wallet</h1>
           <button
             onClick={async () => {
+              if (mnemonic === "") {
+                return;
+              }
               setClicks(clicks + 1);
               const newWallet = getSolWallet(mnemonic, clicks);
               setSolWallet(newWallet[1]);
@@ -58,21 +61,26 @@ function App() {
           <h2>All Sol Wallets</h2>
           <ul>
             {Array.isArray(allSolWallet) &&
-              allSolWallet.map((wallet) =>
-                wallet.map((key, index) => (
-                  <li key={`${index}`}>
-                    {index === 0 ? (
-                      <span>
-                        <b>Private key</b>: {key}
-                      </span>
-                    ) : (
-                      <span>
-                        <b>Public key</b>: {key}
-                      </span>
-                    )}
-                  </li>
-                ))
-              )}
+              allSolWallet.map((wallet, walletIndex) => (
+                <div key={walletIndex}>
+                  <h3>Wallet {walletIndex + 1}</h3>
+                  <ul>
+                    {wallet.map((key, index) => (
+                      <li key={`${walletIndex}-${index}`}>
+                        {index === 0 ? (
+                          <span>
+                            <b>Private key</b>: {key}
+                          </span>
+                        ) : (
+                          <span>
+                            <b>Public key</b>: {key}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
           </ul>
         </div>
 
@@ -80,7 +88,12 @@ function App() {
           <h1>Generate Ether Wallet</h1>
           <button
             onClick={async () => {
+              if (mnemonic === "") {
+                return;
+              }
+
               setClicks(clicks + 1);
+
               const newWallet = getEtherWallet(mnemonic, clicks);
               setEtherWallet(newWallet[2]);
               const totalWallet = [...allEtherWallet, newWallet];
@@ -98,25 +111,30 @@ function App() {
           <h2>All Ether Wallets</h2>
           <ul>
             {Array.isArray(allEtherWallet) &&
-              allEtherWallet.map((wallet, walletIndex) =>
-                wallet.map((key, index) => (
-                  <li key={`${walletIndex}-${index}`}>
-                    {index === 0 ? (
-                      <span>
-                        <b>Private key</b>: {key}
-                      </span>
-                    ) : index === 1 ? (
-                      <span>
-                        <b>Public key</b>: {key}
-                      </span>
-                    ) : (
-                      <span>
-                        <b>Address</b>: {key}
-                      </span>
-                    )}
-                  </li>
-                ))
-              )}
+              allEtherWallet.map((wallet, walletIndex) => (
+                <div key={walletIndex}>
+                  <h3>Wallet {walletIndex + 1}</h3>
+                  <ul>
+                    {wallet.map((key, index) => (
+                      <li key={`${walletIndex}-${index}`}>
+                        {index === 0 ? (
+                          <span>
+                            <b>Private key</b>: {key}
+                          </span>
+                        ) : index === 1 ? (
+                          <span>
+                            <b>Public key</b>: {key}
+                          </span>
+                        ) : (
+                          <span>
+                            <b>Address</b>: {key}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
           </ul>
         </div>
       </div>
