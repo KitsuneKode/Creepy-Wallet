@@ -1,10 +1,19 @@
+// import { ethers } from "ethers";
 import { ethers } from "ethers";
 
-// Function to generate a random mnemonic
-export async function generateRandom() {
-  return ethers.Wallet.createRandom().mnemonic.phrase;
+import { generateMnemonic } from "bip39";
+
+// import generateRandom from "./solana";
+// // Function to generate a random mnemonic
+// export async function generateRandom() {
+//   return  ethers.Wallet.createRandom().mnemonic.phrase;
+// }
+function generateRandom() {
+  return generateMnemonic();
 }
 
+const mnemonic = generateRandom();
+// console.log(mnemonic);
 // Function to generate a wallet for a specific mnemonic and index
 export function getEtherWallet(mnemonicPhrase, clicks) {
   // Derive the wallet using the mnemonic and the index
@@ -12,6 +21,7 @@ export function getEtherWallet(mnemonicPhrase, clicks) {
   const path = `m/44'/60'/${walletIndex}'/0/0`; // Ethereum's derivation path
 
   // Create an HDNode from the mnemonic
+
   const hdNode = ethers.utils.HDNode.fromMnemonic(mnemonicPhrase);
 
   // Derive the wallet at the specified path
@@ -35,3 +45,5 @@ export function getEtherWallet(mnemonicPhrase, clicks) {
   const walletDetails = [privateKey, publicKey, wallet.address];
   return walletDetails;
 }
+
+getEtherWallet(mnemonic, 2);

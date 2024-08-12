@@ -3,7 +3,7 @@ import "./App.css";
 
 import { generateRandom, getSolWallet } from "./Wallets/solana";
 
-import { getEtherWallet } from "./Wallets/ethers";
+import { getEtherWallet } from "./Wallets/ether";
 
 function App() {
   const [mnemonic, setMnemonic] = useState("");
