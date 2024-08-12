@@ -3,6 +3,34 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  position: relative; /* Required for the ::before pseudo-element */
+  color: white; /* Set text color to white for visibility */
+}
+
+#root::before {
+  content: "";
+  background-image: url("./assets/Gemini_Generated_Image_s1ve38s1ve38s1ve.jpg");
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  opacity: 0.25; /* Set image opacity to 50% */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Ensure the background image is behind the text */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .logo {
