@@ -109,7 +109,11 @@ function App() {
                       <span>
                         <b>Public key</b>: {key}
                       </span>
-                    ) : null}
+                    ) : (
+                      <span>
+                        <b>Address</b>: {key}
+                      </span>
+                    )}
                   </li>
                 ))
               )}
