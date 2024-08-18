@@ -3,8 +3,9 @@ import { generateMnemonic, mnemonicToSeedSync } from "bip39";
 import { derivePath } from "ed25519-hd-key";
 import { Keypair } from "@solana/web3.js";
 import { Buffer } from "buffer";
-import crypto from "crypto";
+// import crypto from "crypto";
 
+// Generate mnemonic phrase and seed
 // function getRandomInt(max) {
 //   return Math.floor(Math.random() * max);
 // }
@@ -13,9 +14,6 @@ import crypto from "crypto";
 export async function generateRandom() {
   return generateMnemonic();
 }
-
-// Generate mnemonic phrase and seed
-// const mnemonicPhrase = generateMnemonic();
 
 // Function to generate a wallet for a specific mneomnic
 export function getSolWallet(mnemonicPhrase, clicks) {
@@ -35,35 +33,18 @@ export function getSolWallet(mnemonicPhrase, clicks) {
   const privateKey = Buffer.from(keypair.secretKey).toString("hex");
   const publicKey = keypair.publicKey.toBase58();
 
-  // Hash the public key using SHA-256
-  const hashedPublicKey = crypto
-    .createHash("sha256")
-    .update(keypair.publicKey.toBuffer())
-    .digest("hex");
-
-  //   async function hashPublicKey(publicKey) {
-  //     const encoder = new TextEncoder();
-  //     const data = encoder.encode(publicKey);
-  //     const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-  //     console.log(hashBuffer);
-  //     return Buffer.from(hashBuffer).toString("hex");
-  //   }
-
-  //   // Usage:
-  //   const hashedPublicKey = hashPublicKey(publicKey);
-
   // Print out the results
-  //   console.log("Mnemonic Phrase:", mnemonicPhrase);
-  console.log("Private Key:", privateKey);
-  console.log("Public Key:", publicKey);
-  //   console.log("Hashed Public Key (SHA-256):", hashedPublicKey);
+  // console.log("Mnemonic Phrase:", mnemonicPhrase);
+  // console.log("Private Key:", privateKey);
+  // console.log("Public Key:", publicKey);
 
   // You can also derive the wallet address from the public key (in Solana, the public key is typically the address)
   const walletDetails = [privateKey, publicKey];
 
-  //   const keyValue
   //   console.log("Wallet Address:", walletAddress);
+
   return walletDetails;
 }
 
+//test-run
 // getWallet(mnemonicPhrase);
