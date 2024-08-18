@@ -17,6 +17,7 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 import GenerateMnemonics from "./components/GenerateMnemonics";
 import KeyCardContainer from "./components/KeyCardContainer";
 import ViewAllButton from "./components/AllWalletButton";
+import img from "./assets/bgLessWallet.png";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true); // Dark mode by default
@@ -44,7 +45,7 @@ const App = () => {
       <header className="p-4 flex justify-end">
         <img
           className="w-14 h-14 absolute top-2 left-6"
-          src="./assets/bgLessWallet.png"
+          src={img}
           alt="App icon"
         />
 
