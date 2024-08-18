@@ -44,7 +44,8 @@ const App = () => {
       <header className="p-4 flex justify-end">
         <img
           className="w-14 h-14 absolute top-2 left-6"
-          src="./src/assets/bglessWallet.jpg"
+          src="/src/assets/bgLessWallet.png"
+          // srcSet="./assets/bgLessWallet.png"
           alt="App icon"
         />
 
