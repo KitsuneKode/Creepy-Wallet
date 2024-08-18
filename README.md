@@ -6,7 +6,7 @@
 [Creepy-Wallet](https://kitsunekode-creepy-wallet-sand.vercel.app/)
 
 # Pictures
-![Wallet Image](./src/assets/screenshot.png)
+![Wallet Image](./src/assets/screenshotNewUI.png)
 ## Features
 
 - Generate random mnemonic phrases.
