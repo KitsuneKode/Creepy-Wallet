@@ -32,7 +32,7 @@ const WalletList = ({
           >
             <button
               onClick={onClose}
-              className="sticky  top-4 right-4 text-gray-400 hover:text-gray-100"
+              className="sticky  top-1 right-4 text-gray-400 hover:text-gray-100"
               style={{ float: "right" }}
             >
               <svg
