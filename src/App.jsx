@@ -44,8 +44,8 @@ const App = () => {
       <header className="p-4 flex justify-end">
         <img
           className="w-14 h-14 absolute top-2 left-6"
-          src="./src/assets/bglessWallet.png"
-          alt="Gemini Icon"
+          src="./src/assets/bglessWallet.jpg"
+          alt="App icon"
         />
 
         <ThemeSwitcher isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
