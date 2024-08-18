@@ -13,15 +13,8 @@ const WalletList = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className={`fixed inset-0 flex items-center justify-center
-        
-        
-        
-         ${isDarkMode ? " bg-gray-900 " : " bg-gray-300 "}
-    
-            
-        
-        `}
+          className={`fixed inset-0 flex items-center justify-center 
+            ${isDarkMode ? " bg-gray-900 " : " bg-gray-300 "}`}
           initial={{ opacity: 0, scale: 1.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.6 }}
@@ -39,7 +32,8 @@ const WalletList = ({
           >
             <button
               onClick={onClose}
-              className="sticky top-4 right-4 text-gray-400 hover:text-gray-100"
+              className="sticky  top-4 right-4 text-gray-400 hover:text-gray-100"
+              style={{ float: "right" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +50,7 @@ const WalletList = ({
                 />
               </svg>
             </button>
-            <h2 className="text-2xl font-bold mb-4">All Wallets</h2>
+            <h2 className="text-2xl font-bold mb-4">All Sol Wallets</h2>
             <motion.div
               className="space-y-4"
               initial="hidden"
