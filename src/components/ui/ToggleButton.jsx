@@ -37,7 +37,7 @@ const ToggleButton = ({ isDarkMode, showGrid, onToggleGrid }) => {
           className={` ${isDarkMode ? " text-gray-200" : "text-gray-600"}
      text-lg font-medium ml-auto`}
         >
-          {showGrid ? "Hide Mnemonics" : "Show Mnemonics"}
+          {showGrid ? "Hide Secret Phrase" : "Show Secret Phrase"}
         </span>
       </div>
     </>

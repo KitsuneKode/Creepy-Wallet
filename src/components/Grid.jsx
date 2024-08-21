@@ -1,7 +1,7 @@
 // Grid.js
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ToggleButton from "./ToggleButton";
+import ToggleButton from "./ui/ToggleButton";
 import NotificationBar from "./NotificationBar";
 import PropTypes from "prop-types";
 
@@ -100,7 +100,7 @@ const Grid = ({ mnemonic, isDarkMode }) => {
 
       {showNotification && (
         <NotificationBar
-          message={"Mnemonics Copied"}
+          message={"Secret Phrase Copied"}
           timer={timer}
           onClose={handleCloseNotification}
         />

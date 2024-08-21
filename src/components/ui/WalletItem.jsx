@@ -1,6 +1,6 @@
 // WalletItem.jsx
 import { useState } from "react";
-import NotificationBar from "./NotificationBar";
+import NotificationBar from "../NotificationBar";
 import KeyInput from "./KeyInput";
 import PropTypes from "prop-types";
 

@@ -1,5 +1,6 @@
-import { ethers } from "ethers";
-// import { generateRandom } from "./solana.js";
+import { ethers, HDNodeWallet } from "ethers";
+import { generateRandom } from "./solana.js";
+import { mnemonicToSeedSync } from "bip39";
 
 // Function to generate a wallet for a specific mnemonic and index
 export function getEtherWallet(mnemonicPhrase, clicks) {
@@ -7,9 +8,12 @@ export function getEtherWallet(mnemonicPhrase, clicks) {
   const walletIndex = clicks; // Change this index for different accounts
   const path = `m/44'/60'/${walletIndex}'/0/0`; // Ethereum's derivation path
 
-  // Create an HDNode from the mnemonic
+  // mnemonic to seed
+  const seed = mnemonicToSeedSync(mnemonic);
 
-  const hdNode = ethers.utils.HDNode.fromMnemonic(mnemonicPhrase);
+  // Create an HDNode from the seed
+
+  const hdNode = HDNodeWallet.fromSeed(seed);
 
   // Derive the wallet at the specified path
   const derivedNode = hdNode.derivePath(path);
@@ -33,9 +37,9 @@ export function getEtherWallet(mnemonicPhrase, clicks) {
   return walletDetails;
 }
 
-// let mnemonic;
-// (async () => {
-//   mnemonic = await generateRandom();
-//   const result = getEtherWallet(mnemonic, 2);
-//   console.log(result);
-// })();
+let mnemonic;
+(async () => {
+  mnemonic = await generateRandom();
+  const result = getEtherWallet(mnemonic, 2);
+  console.log(result);
+})();

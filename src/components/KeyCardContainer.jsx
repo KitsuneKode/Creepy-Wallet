@@ -1,4 +1,4 @@
-import KeyCard from "./WalletCard";
+import KeyCard from "./ui/WalletCard";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
@@ -15,7 +15,7 @@ const KeyCardContainer = ({
 
   return (
     <div className={`p-6 rounded-lg w-full max-w-screen-lg mx-auto`}>
-      <div className="flex flex-wrap justify-between items-start mb-8">
+      <div className="flex flex-wrap justify-between items-start mb-2">
         <KeyCard
           mnemonic={mnemonic}
           clicks={solClicks}

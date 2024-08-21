@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { generateRandom } from "./scripts/solana";
 import Grid from "./Grid";
-import KeyAlert from "./keyAlert";
+import KeyAlert from "./ui/keyAlert";
 import PropTypes from "prop-types";
 
 const GenerateMnemonics = ({ isDarkMode, mnemonic, setMnemonic }) => {
@@ -14,9 +14,9 @@ const GenerateMnemonics = ({ isDarkMode, mnemonic, setMnemonic }) => {
         <h1
           className={`text-2xl font-bold ${
             isDarkMode ? " text-gray-300" : "text-gray-700"
-          } mb-4 `}
+          } mb-4 ml-9`}
         >
-          Generate Mnemonics
+          Secret Phrase
         </h1>
         <button
           onClick={async () => {
@@ -32,7 +32,7 @@ const GenerateMnemonics = ({ isDarkMode, mnemonic, setMnemonic }) => {
           }}
           className="bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:from-blue-600 hover:to-teal-600 transition duration-300 transform hover:scale-105"
         >
-          Generate Mnemonics
+          Generate Secret Phrase
         </button>
 
         <KeyAlert message={alertMessage} onClose={() => setAlertMessage("")} />

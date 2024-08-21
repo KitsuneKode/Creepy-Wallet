@@ -1,17 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-//           `PS: In Solana, the public key itself is used directly as the wallet
-//     address without any further hashing or transformation. This is different
-//     from some other blockchains (like Bitcoin or Ethereum), where the public
-//     key undergoes additional hashing steps to create the final address. The
-//     public key is usually encoded in Base58 format, which makes it shorter
-//     and more human-readable. This Base58-encoded string is what you use as
-//     the wallet address on the Solana network.`}
-//       </h2>
-//     </div>
-//   );
-// }
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import GenerateMnemonics from "./components/GenerateMnemonics";
@@ -51,7 +41,7 @@ const App = () => {
 
         <ThemeSwitcher isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
       </header>
-      <main className="p-8 flex flex-col items-center">
+      <main className="p-8 pt-0 flex flex-col items-center">
         {/* <Grid isDarkMode={isDarkMode} /> */}
         <GenerateMnemonics
           isDarkMode={isDarkMode}
@@ -74,6 +64,8 @@ const App = () => {
           allEtherWallet={allEtherWallet}
           allSolWallet={allSolWallet}
         />
+
+        <SpeedInsights />
       </main>
     </div>
   );

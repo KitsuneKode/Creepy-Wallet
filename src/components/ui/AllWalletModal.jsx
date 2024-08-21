@@ -89,8 +89,8 @@ const WalletList = ({
 };
 
 WalletList.propTypes = {
-  solWalletLength: PropTypes.arrayOf(PropTypes.any),
-  isOpen: PropTypes.func,
+  solWalletLength: PropTypes.array,
+  isOpen: PropTypes.bool,
   onClose: PropTypes.func,
   wallets: PropTypes.arrayOf(PropTypes.any),
   isDarkMode: PropTypes.bool,

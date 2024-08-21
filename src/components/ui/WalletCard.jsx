@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { getSolWallet } from "./scripts/solana.js";
-import { getEtherWallet } from "./scripts/ether.js";
+import { getSolWallet } from "../scripts/solana.js";
+import { getEtherWallet } from "../scripts/ether.js";
 import PropTypes from "prop-types";
-import NotificationBar from "./NotificationBar.jsx";
+import NotificationBar from "../NotificationBar.jsx";
 import KeyInput from "./KeyInput.jsx";
 
 const KeyCard = ({

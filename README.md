@@ -2,11 +2,14 @@
 
  This project is a React application designed to generate cryptocurrency wallets for both Solana and Ethereum. It leverages mnemonic phrases to create wallets and display their private and public keys.
 
-# LiveLinks
+## LiveLinks
+
 [Creepy-Wallet](https://kitsunekode-creepy-wallet-sand.vercel.app/)
 
-# Pictures
+## Pictures
+
 ![Wallet Image](./src/assets/screenshotNewUI.png)
+
 ## Features
 
 - Generate random mnemonic phrases.
@@ -22,12 +25,14 @@
          git clone https://github.com/kitsunekode/Crypto-Wallet
          cd Web3-Wallet  
    ```
+
 2. **Install dependecies:**
 
 ```bash
       npm install
 
 ```
+
 3 **Start development server:**
 
 ```bash
@@ -36,14 +41,24 @@
 ```
 
 ## Usage
-- Open the application in your browser at http://localhost:3000.
+
+- Open the application in your browser at <http://localhost:5713>.
 - Click the "Generate" button to generate a new wallet.
 - The application will display the private and public keys for the generated wallet.
 
-
 ## Project Structure
+
 -src/: Contains the source code for the React application.
 -App.jsx: Main component that handles wallet generation and displays the keys.
 -solana.js: Contains functions for generating Solana wallets.
 -ethereum.js: Contains functions for generating Ethereum wallets.
 -index.js: Entry point for the React application.
+-balance.js: Fetch the balance of the accounts
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## Author
+
+**[KitsuneKode](https://github.com/KitsuneKode)**

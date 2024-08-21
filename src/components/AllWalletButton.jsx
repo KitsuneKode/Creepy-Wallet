@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import WalletList from "./AllWalletModal";
+import WalletList from "./ui/AllWalletModal";
 import PropTypes from "prop-types";
 
 const ViewAllButton = ({
@@ -20,7 +20,7 @@ const ViewAllButton = ({
 
   return (
     <div
-      className={` min-h-screen
+      className={` 
         ${
           isDarkMode
             ? "border-gray-700 bg-gray-900"
