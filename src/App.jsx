@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import GenerateMnemonics from "./components/GenerateMnemonics";
@@ -64,7 +65,7 @@ const App = () => {
           allEtherWallet={allEtherWallet}
           allSolWallet={allSolWallet}
         />
-
+        <Analytics />
         <SpeedInsights />
       </main>
     </div>
