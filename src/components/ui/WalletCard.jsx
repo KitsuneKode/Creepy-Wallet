@@ -90,7 +90,7 @@ const KeyCard = ({
         transition={{ duration: 0.2 }}
         onClick={handleButtonClick}
       >
-        Generate {handleClick == "SOL" ? "SOLANA" : "ETHERIUM"} Wallet
+        Generate {handleClick == "SOL" ? "SOLANA" : "ETHEREUM"} Wallet
         <motion.div
           className="absolute inset-0 bg-blue-400 opacity-50"
           initial={{ scale: 0 }}

@@ -35,7 +35,7 @@ const WalletItem = ({ solWalletLength, isDarkMode, wallet, index }) => {
     >
       <h3 className="text-xl font-semibold mb-2">
         {index + 1 > solWalletLength ? (
-          <>Etherium Wallet {index + 1 - solWalletLength}</>
+          <>Ethereum Wallet {index + 1 - solWalletLength}</>
         ) : (
           <>Solana Wallet {index + 1}</>
         )}

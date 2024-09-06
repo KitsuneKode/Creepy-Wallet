@@ -47,4 +47,12 @@ export function getSolWallet(mnemonicPhrase, clicks) {
 }
 
 //test-run
-// getWallet(mnemonicPhrase);
+
+// (async () => {
+//   const mnemonicPhrase = await generateRandom();
+
+//   const mnenmonic = mnemonicPhrase;
+//   console.log(mnenmonic.type);
+// })();
+
+// getSolWallet(mnemonicPhrase);

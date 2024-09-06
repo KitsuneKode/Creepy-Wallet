@@ -50,7 +50,7 @@ const WalletList = ({
                 />
               </svg>
             </button>
-            <h2 className="text-2xl font-bold mb-4">All Sol Wallets</h2>
+            <h2 className="text-2xl font-bold mb-4"> All Wallets</h2>
             <motion.div
               className="space-y-4"
               initial="hidden"
